@@ -1,3 +1,5 @@
+/*=========================== Landing Page =========================== */
+
 #wrapper{
     width: 970px;
     height: 720px;
@@ -13,6 +15,23 @@
     background-repeat: no-repeat;
     background-size: 100% auto;
     overflow: hidden;
+}
+#title{
+    font-family: 'Coiny', cursive;
+    z-index: 5;
+    color:whitesmoke;
+    position: absolute;
+    top: 28%;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    font-size: 3.2rem;
+    text-align: center;
+    text-shadow: 4px 3px #963939;
+    animation: titleO 1.5s infinite;
+}
+#title:hover{
+    font-size:3.4rem;
 }
 #blood{
     width: 950px;
@@ -32,93 +51,59 @@
 #bat1{
     width: 100px;
     position: absolute;
-    top: 25%;
-    right:13%;
-    z-index:2;
+    top:35% ;
+    right: 11%;
+    z-index:5;
+    animation: bat1M 3s infinite
 }
 #bat2{
     width: 40px;
-    z-index: 3;
+    z-index: 0;
     position: absolute;
     top: 22%;
-    right:29%;
+    right: 29%;
 }
 #bat3{
     width: 70px;
     position: absolute;
-    top: 46%;
-    left:32%;
-    z-index:2;
-    animation: bat3M 4s;
+    top: 10%;
+    left: 20%;
+    z-index:3;
+    animation: bat3M 4s infinite;
+    animation-delay: 1s;
 }
 #cloud1{
     width: 89px;
     z-index: 2;
     position: absolute;
     bottom: 40%;
-    left: 34%
+    left: 10%;
+    animation: moving3 30s infinite;
+    animation-delay: 2s;
 }
 #cloud2{
     width: 138px;
     z-index: 2;
     position: absolute;
     top: 38%;
-    right: 12%;
-    animation: moving1 5s;
+    right: 10%;
+    animation: moving1 25s infinite;
 }
 #cloud3{
     width: 158px;
-    z-index: 0;
+    z-index: 3;
     position: absolute;
-    top: 25%;
-    left: 8%
+    top: 20%;
+    left: 8%;
+    animation: moving2 20s infinite;
 
-}
-@keyframes moving1 {
-    0% {right:0%;}
-    100% {right: 12%}
-}
-@keyframes bat3M {
-    0% {top: 10%; left:20%; }
-    30% {top: 30%; left:60%;transform: rotate(80deg);}
-    40% {transform: rotate(-10deg);}
-    70% {top: 40%; left:20%;transform: rotate(60deg);}
-    100% {top: 46%; left:32%;}
-}
-@keyframes titleO {
-    50% {opacity: 0;}
-}
-@keyframes Opa{
-    30% {opacity: 0;}
-    32% {opacity: 1;}
-    50% {opacity: 0.4;}
-    52% {opacity: 1;}
-    100% {opacity: 0.3;}
-    
-}
-#title{
-    font-family: 'Coiny', cursive;
-    z-index: 5;
-    color:whitesmoke;
-    position: absolute;
-    top: 28%;
-    left: 0;
-    right: 0;
-    margin:0 auto;
-    font-size: 3.2rem;
-    text-align: center;
-    text-shadow: 4px 3px #963939;
-    animation: titleO 1.5s infinite;
-}
-#title:hover{
-    font-size:3.4rem;
 }
 #window{
     width: 89px;
     height: 139px;
     position: absolute;
     bottom:18.3%;
-    left: 37.1%;
+    left: 360px;
     opacity:1; 
 }
 #start{
@@ -144,126 +129,39 @@
     height: 40px;
     font-size: 1rem;
 }
-#main{
-    width: 970px;
-    height: 720px;
-/*    background-color: red;*/
-    position: absolute;
-    top: 0px;
-    bottom:0px;
-    left:0px;
-    right: 0px;
-    margin: auto;
-    background-image: url(img/main-02.svg);
-    background-position:left;
-    background-repeat: no-repeat;
-    background-size:auto 100% ;
-    display: none;
-    transition: 3s;
-    overflow: hidden;
+
+/*============================= Animation ============================= */
+
+@keyframes moving1 {
+    33% {right:60%;}
 }
-#left{
-    top: 44%;
-    left: 2%;
-    display: none;
-    z-index: 10;
+@keyframes moving2{
+    50% {left: 80%;}
 }
-#right{
-    top: 44%;
-    right: 2%;
-    z-index: 40;
+@keyframes moving3{
+    50% {left: 80%;}
 }
-.pageButton{
-    border-radius: 50px;
-    width: 60px;
-    height: 60px;
-    padding:5px;
-    position: absolute;
-    cursor: pointer;
+@keyframes bat1M {
+    50% {transform: rotate(45deg);}  
 }
-.pageButton:hover{
-    background-color: #8EAD3A;
+@keyframes bat3M {
+    40% {top: 30%; left:60%;transform: rotate(80deg);}
+    50% {transform: rotate(-10deg);}
+    70% {top: 40%; left:20%;transform: rotate(60deg);}
+    100% {top: 46%; left:32%;}
 }
-#spider{
-    width: 80px;
-    height: auto;
-    position: absolute;
-    top: 7%;
-    left: 7%;
+@keyframes titleO {
+    50% {opacity: 0;}
 }
-#pumkin{
-    width: 150px;
-    height: auto;
-    position: absolute;
-    bottom: 15%;
-    right: 22%;
+@keyframes Opa{
+    30% {opacity: 0;}
+    32% {opacity: 1;}
+    50% {opacity: 0.4;}
+    52% {opacity: 1;}
+    100% {opacity: 0.3;}  
 }
-#pumS{
-    width: 150px;
-    height: auto;
-    position: absolute;
-    bottom: 13.5%;
-    right: 22%;
-    opacity: 0.7;
-}
-h2{
-    font-family: 'Coiny', cursive;   
-}
-h5, h6, p{
-    font-family: 'Roboto', sans-serif;
-} 
-.fact{
-    display: none;
-    width: 55%;
-    height: auto;
-    background-color: #ccc;
-    position: absolute;
-    margin:auto;
-    opacity: 0.9;
-    border-radius: 30px;
-    padding:0.5rem 2rem 1.5rem 2rem;
-    font-size: 1rem;
-    transition: 2s;
-    z-index: 40;
-}
-.click{
-    cursor: context-menu;
-}
-#fact1{
-    bottom:40%;
-    left:0;
-    right:0;
-}
-#fact1:after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	right: 30%;
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-top-color: #ccc;
-	border-bottom: 0;
-	border-right: 0;
-	margin-right: -20px;
-	margin-bottom: -40px;
-}
-.close{
-    width: 35px;
-    height: 35px;
-    padding: 0.2rem;
-    font-size: 1.4rem;
-    border-radius: 30px;
-    border: none;
-    color: white;
-    background-color: #aaa;
-    font-family:'Coiny', cursive;
-    position: absolute;
-    right: 20px;
-    top: 20px; 
-}
-.fact h2{
-    width: 95%;
+@keyframes opa2{
+    50% {opacity: 0.7;}
 }
 @keyframes jump {
     50% {bottom:20%;}
@@ -286,31 +184,115 @@ h5, h6, p{
     100% {transform: rotatey(180deg);}
     
 }
-#spider2{
-    width: 60px;
-    height: 220px;
-    background-image: url(img/spider2.svg);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position:left -220px;
-    transition: 3s;
-    position: absolute;
-    top: 0;
-    left: 20%;
+@keyframes skullR {
+    45% {top:20%; transform: rotate(40deg);}
+    55% {top: 20%; transform: rotate(-40deg);}
 }
-#owl{
-    width: 150px;
-    height: auto;
+
+/*========================= regardless page, class selector ========================== */
+
+h2{
+    font-family: 'Coiny', cursive;   
+}
+h5, h6, p{
+    font-family: 'Roboto', sans-serif;
+} 
+#left{
+    top: 44%;
+    left: 2%;
+    display: none;
+    z-index: 10;
+}
+#right{
+    top: 44%;
+    right: 2%;
+    z-index: 40;
+}
+.pageButton{
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    padding:5px;
     position: absolute;
+    cursor: pointer;
+}
+.pageButton:hover{
+    background-color: #8EAD3A;
+}
+.additional{
+    cursor: pointer;
+}
+#factN{
+    font-family: 'Coiny', cursive;
+    margin: 0;
+    font-size: 2.5rem;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 2%;
     top: 2%;
-    right: 41%;
+    color: #ccc;
 }
-#skull{
-    width: 60px;
+.fact{
+    display: none;
+    width: 55%;
     height: auto;
+    background-color: #ccc;
     position: absolute;
-    top: 25.5%;
-    left:34%;
+    margin:auto;
+    opacity: 0.9;
+    border-radius: 30px;
+    padding:0.5rem 2rem 1.5rem 2rem;
+    font-size: 1rem;
+    transition: 2s;
+    z-index: 40;
+}
+.click{
+    cursor: context-menu;
+}
+.close{
+    width: 35px;
+    height: 35px;
+    padding: 0.2rem;
+    font-size: 1.4rem;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    background-color: #aaa;
+    font-family:'Coiny', cursive;
+    position: absolute;
+    right: 20px;
+    top: 20px; 
+}
+.fact h2{
+    width: 95%;
+}
+.pops{
+    position: absolute;
+    top: -10%;
+    width: 60px;
+    transition:3s;
+}
+
+/*=========================== Second Page =========================== */
+
+#main{
+    width: 970px;
+    height: 720px;
+/*    background-color: red;*/
+    position: absolute;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right: 0px;
+    margin: auto;
+    background-image: url(img/main-02.svg);
+    background-position:left;
+    background-repeat: no-repeat;
+    background-size:auto 100% ;
+    display: none;
+    transition: 3s;
+    overflow: hidden;
 }
 #secondPage{
     transition: 3s;
@@ -321,6 +303,25 @@ h5, h6, p{
     left: 0;
     margin: auto;
     overflow: hidden;
+}
+#fact1{
+    bottom:40%;
+    left:0;
+    right:0;
+}
+#fact1:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	right: 30%;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-top-color: #ccc;
+	border-bottom: 0;
+	border-right: 0;
+	margin-right: -20px;
+	margin-bottom: -40px;
 }
 #fact2{
     top: 35%;
@@ -360,18 +361,104 @@ h5, h6, p{
 	margin-left: -20px;
 	margin-bottom: -40px;
 }
+#fact10{
+    bottom:18%;
+    left: 0;
+    right: 0;
+}
+#fact10:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 35%;
+	width: 0;
+	height: 0;
+	border: 50px solid transparent;
+	border-bottom-color: #ccc;
+	border-top: 0;
+	border-right: 0;
+	margin-left: -20px;
+	margin-top: -40px;
+}
+#spider{
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: 7%;
+    left: 7%;
+}
+#spider2{
+    width: 60px;
+    height: 220px;
+    background-image: url(img/spider2.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position:left -220px;
+    transition: 3s;
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+#pumkin{
+    width: 150px;
+    height: auto;
+    position: absolute;
+    bottom: 15%;
+    right: 22%;
+}
+#pumS{
+    width: 150px;
+    height: auto;
+    position: absolute;
+    bottom: 13.5%;
+    right: 22%;
+    opacity: 0.7;
+}
+#owl{
+    width: 150px;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    right: 41%;
+}
+#skull{
+    width: 60px;
+    height: auto;
+    position: absolute;
+    top: 25.5%;
+    left:34%;
+}
+#candle{
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 19.6%;
+    right:38%;
+}
+#light{
+    width: 50px;
+    position: absolute;
+    top: 18.5%;
+    right:37.5%;
+    opacity: 0;
+/*    animation: candleO 2s infinite;*/
+}
 #candy{
     width: 46px;
     position: absolute;
     bottom:25.4%;
     left: 20.4%;
 }
-#posion{
+#pot{
     width: 120px;
     height: 140px;
     position: absolute;
     bottom: 20.4%;
     left: 44.3%;
+}
+#poison{
+    animation: opa2 3s infinite;
+    
 }
 #calender{
     width: 215px;
@@ -395,6 +482,19 @@ h5, h6, p{
     right: 45.5%;
     opacity: 0.9;
 }
+
+/*=========================== Second Page =========================== */
+
+#lastPage{
+    transition:  left 3s;
+    width: 970px;
+    height: 720px;
+    position:absolute;
+    top: 0;
+    left: 100%;
+    margin: auto;
+    overflow: hidden;
+}
 #fact4{
     bottom: 10%;
     left: 20%;
@@ -412,29 +512,6 @@ h5, h6, p{
 	border-left: 0;
 	margin-left: -20px;
 	margin-top: -40px;
-}
-#basket{
-    width: 200px;
-    height: auto;
-    position: absolute;
-    bottom:10%;
-    left: 12%;
-}
-.pops{
-    position: absolute;
-    top: -10%;
-    width: 60px;
-    transition:3s;
-}
-#lastPage{
-    transition:  left 3s;
-    width: 970px;
-    height: 720px;
-    position:absolute;
-    top: 0;
-    left: 100%;
-    margin: auto;
-    overflow: hidden;
 }
 #fact5{
     top:25%;
@@ -454,25 +531,6 @@ h5, h6, p{
 	margin-left: -20px;
 	margin-bottom: -40px;
 }
-#ghost{
-    width: 220px;
-    height: auto;
-    position: absolute;
-    bottom: 10%;
-    right:5%; 
-}
-#moon{
-    width: 300px;
-    height: 200px;
-    transition: 3s;
-    position: absolute;
-    top: 8%;
-    right: 20%;
-    background-image: url(img/witch.svg);
-    background-position: 300px 20px;
-    background-size: 20% auto;
-    background-repeat: no-repeat;
-}
 #fact6{
     top: 53%;
     left:10%;
@@ -491,29 +549,6 @@ h5, h6, p{
 	margin-left: -20px;
 	margin-top: -40px;
 }
-#spray{
-    width: 50px;
-    height: auto;
-    position: absolute;
-    bottom: 17%;
-    right: 42%;
-}
-#lid{
-    width: 43px;
-    height: auto;
-    position: absolute;
-    bottom: 31.5%;
-    right: 42.4%;
-    transition: 2s;
-}
-#string{
-    width: 110px;
-    position: absolute;
-    bottom: 17.3%;
-    right: 32.5%;
-    opacity: 0;
-    transition: 3s;
-}
 #fact7{
     top:14%;
     left: 18%;
@@ -531,13 +566,6 @@ h5, h6, p{
 	border-right: 0;
 	margin-right: -20px;
 	margin-bottom: -40px;
-}
-#candyCone{
-    width: 30px;
-    height: auto;
-    position: absolute;
-    bottom: 14%;
-    left: 41.6%;
 }
 #fact8{
     bottom: 30%;
@@ -576,51 +604,61 @@ h5, h6, p{
 	margin-right: -20px;
 	margin-bottom: -40px;
 }
-#candle{
-    width: 40px;
+#basket{
+    width: 200px;
     height: auto;
     position: absolute;
-    top: 19.6%;
-    right:38%;
+    bottom:10%;
+    left: 12%;
 }
-#light{
-    width: 50px;
+#ghost{
+    width: 220px;
+    height: auto;
     position: absolute;
-    top: 18.5%;
-    right:37.5%;
+    bottom: 10%;
+    right:5%; 
+}
+#moon{
+    width: 300px;
+    height: 200px;
+    transition: 3s;
+    position: absolute;
+    top: 8%;
+    right: 20%;
+    background-image: url(img/witch.svg);
+    background-position: 300px 20px;
+    background-size: 20% auto;
+    background-repeat: no-repeat;
+}
+#spray{
+    width: 50px;
+    height: auto;
+    position: absolute;
+    bottom: 17%;
+    right: 42%;
+}
+#lid{
+    width: 43px;
+    height: auto;
+    position: absolute;
+    bottom: 31.5%;
+    right: 42.4%;
+    transition: 2s;
+}
+#string{
+    width: 110px;
+    position: absolute;
+    bottom: 17.3%;
+    right: 32.5%;
     opacity: 0;
-/*    animation: candleO 2s infinite;*/
+    transition: 3s;
 }
-#fact10{
-    bottom:18%;
-    left: 0;
-    right: 0;
-}
-#fact10:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: 35%;
-	width: 0;
-	height: 0;
-	border: 50px solid transparent;
-	border-bottom-color: #ccc;
-	border-top: 0;
-	border-right: 0;
-	margin-left: -20px;
-	margin-top: -40px;
-}
-.additional{
-    cursor: pointer;
-}
-#factN{
-    font-family: 'Coiny', cursive;
-    margin: 0;
-    font-size: 2.5rem;
-    width: 50px;
-    height: 50px;
+#candyCone{
+    width: 30px;
+    height: auto;
     position: absolute;
-    right: 2%;
-    top: 2%;
-    color: #ccc;
+    bottom: 14%;
+    left: 41.6%;
 }
+
+

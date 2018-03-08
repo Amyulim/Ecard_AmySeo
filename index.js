@@ -1,23 +1,24 @@
 var title = document.getElementById("title");
 var mainP = document.getElementById("main");
+var myWindow = document.getElementById("window");
 
 title.addEventListener("click", function (){
     document.getElementById("blood").style.backgroundPosition="left -100px";
+    
     title.style.color="#c63932"; 
     title.style.textShadow ="4px 3px black";
     title.style.animation ="none"
+    
     document.getElementById("laugh").play()
     
-    document.getElementById("window").style.animation="Opa 3s infinite";
-    document.getElementById("window").style.opacity="0";
-    document.getElementById("start").style.display="block"
-   
+    myWindow.style.animation = "Opa 3s infinite";
+    myWindow.style.opacity = "0";
+    document.getElementById("start").style.display = "block"
 });
+
 document.getElementById("start").addEventListener("click", function (){
     mainP.style.display="block";
     document.getElementById("wrapper").style.display="none";
-//    document.getElementById("sound").src = "";
-    
 });
 
 /*=========================== Second Page =========================== */
@@ -32,25 +33,16 @@ rightB.addEventListener("click", function (){
     mainP.style.backgroundPosition = "right";
     leftB .style.display = "block"
     rightB.style.display = "none"
-//    document.getElementById("secondPage").style.display ="none";
     secondPage.style.left = "-100%";
-//    lastPage.style.display="block";
     lastPage.style.left ="0%";
-//    lastPage.style.opacity="1";
-   
-
 });
-var a = 0;
+
 leftB.addEventListener("click", function (){
     mainP.style.backgroundPosition = "left";
     leftB .style.display = "none"
     rightB.style.display = "block";
-//    secondPage.style.display = "block";
-//    secondPage.style.opacity = "1";
     secondPage.style.left = "0";
-    lastPage.style.left ="100%";
-    
-   
+    lastPage.style.left ="100%"; 
 });
 
 var pumkin = document.getElementById("pumkin");
@@ -73,7 +65,6 @@ pumkin.addEventListener("click", function () {
         factCount.innerHTML = x - 1;
         x--;
     }
-
 });
 
 document.getElementById("fact1C").addEventListener("click", function () {
@@ -82,29 +73,31 @@ document.getElementById("fact1C").addEventListener("click", function () {
     pumkinS.style.animation = "none";
 });
 
-
 owl.addEventListener("click", function (){
     document.getElementById("fact2").style.display = "block";
     owl.style.top = "3%";
     owl.style.transform = "rotate(-7deg)";
+    
     b++;
     if(b == 1){
         factCount.innerHTML = x - 1;
         x--;
     }
-
 });
 
 document.getElementById("fact2C").addEventListener("click", function () {
     document.getElementById("fact2").style.display = "none";
 });
 
-document.getElementById("spider").addEventListener("mouseenter", function () {
-    document.getElementById("spider2").style.backgroundPosition ="0"
+var spider = document.getElementById("spider");
+var spider2 = document.getElementById("spider2");
+
+spider.addEventListener("mouseenter", function () {
+    spider2.style.backgroundPosition ="0"
 });
 
-document.getElementById("spider").addEventListener("mouseleave", function () {
-    document.getElementById("spider2").style.backgroundPosition = "left -220px";
+spider.addEventListener("mouseleave", function () {
+    spider2.style.backgroundPosition = "left -220px";
 })
 
 var candy = document.getElementById("candy");
@@ -113,7 +106,8 @@ candy.addEventListener("mouseenter", function () {
 });
 
 candy.addEventListener("click", function () {
-    document.getElementById("fact3").style.display="block" 
+    document.getElementById("fact3").style.display="block" ;
+    
     c++;
     if(c == 1){
         factCount.innerHTML = x - 1;
@@ -126,13 +120,19 @@ document.getElementById("fact3C").addEventListener("click", function () {
     candy.style.animation = "none";
 });
 
-document.getElementById("posion").addEventListener("click", function () {
-    document.getElementById("posion").innerHTML = "<img src='img/poison.svg' />"
+document.getElementById("pot").addEventListener("click", function () {
+    document.getElementById("pot").innerHTML = "<img src='img/poison.svg' id='poison'/>"
+});
+
+var skull = document.getElementById("skull");
+skull.addEventListener("mouseenter", function () {
+    skull.style.animation="skullR 3s infinite";
 });
 
 document.getElementById("calender").addEventListener("click", function () {
     document.getElementById("calender").innerHTML = "<img src='img/Sblood1.svg' id='b1'/><img src='img/Sblood2.svg' id='b2'/>"
     document.getElementById("fact4").style.display = "block";
+    
     d++;
     if(d == 1){
         factCount.innerHTML = x - 1;
@@ -178,15 +178,15 @@ function makeItCandyS(){
 };
 
 document.getElementById("basket").addEventListener("click", function () { 
-    console.log("click")
-     make3CandyS()
+//    console.log("click")
+    make3CandyS()
     document.getElementById("fact5").style.display="block";
+    
     e++;
     if(e == 1){
         factCount.innerHTML = x - 1;
         x--;
     }
-
 });
 
 document.getElementById("fact5C").addEventListener("click", function () {
@@ -197,6 +197,7 @@ document.getElementById("moon").addEventListener("click", function () {
     console.log("click")
     document.getElementById("moon").style.backgroundPosition="-70px 120px";
     document.getElementById("fact6").style.display="block";
+    
     f++;
     if(f == 1){
         factCount.innerHTML = x - 1;
@@ -214,6 +215,7 @@ document.getElementById("spray").addEventListener("click", function () {
     document.getElementById("lid").style.bottom = "36%";
     document.getElementById("string").style.opacity = "1";
     document.getElementById("fact7").style.display = "block";
+    
     g++;
     if(g == 1){
         factCount.innerHTML = x - 1;
@@ -228,6 +230,7 @@ document.getElementById("fact7C").addEventListener("click", function () {
 document.getElementById("candyCone").addEventListener("click", function() {
     document.getElementById("fact8").style.display = "block";
     document.getElementById("candyCone").style.animation = "rotate 2s infinite";
+    
     h++;
     if(h == 1){
         factCount.innerHTML = x - 1;
@@ -243,7 +246,8 @@ document.getElementById("fact8C").addEventListener("click", function () {
 
 document.getElementById("ghost").addEventListener("click", function () {
     document.getElementById("fact9").style.display = "block";
-    document.getElementById("ghost").style.animation = "move 4s infinite"
+    document.getElementById("ghost").style.animation = "move 4s infinite";
+    
     i++;
     if(i == 1){
         factCount.innerHTML = x - 1;
@@ -258,6 +262,7 @@ document.getElementById("fact9C").addEventListener("click", function () {
 document.getElementById("candle").addEventListener("click", function () {
     document.getElementById("light").style.animation = "candleO 2s infinite";
     document.getElementById("fact10").style.display = "block";
+    
     j++;
     if(j == 1){
         factCount.innerHTML = x - 1;

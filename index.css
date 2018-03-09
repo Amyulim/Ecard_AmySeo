@@ -674,5 +674,45 @@ h5, h6, p{
     bottom: 14%;
     left: 41.6%;
 }
-
+#finished{
+    width: 970px;
+    height: 720px;
+/*    background-color: red;*/
+    position: absolute;
+    top: 0px;
+    bottom:0px;
+    left:0px;
+    right: 0px;
+    margin: auto;
+    display:none;
+    z-index: 50;
+}
+#Fback{
+    position: absolute;
+    width: 970px;
+    height: 720px;
+    background-color: #A4A4A5;
+    opacity: 0.9; 
+    z-index: -1;
+}
+#last{
+    text-align: center;
+    width: 45%;
+    height: auto;
+    position: absolute;
+    top: 11%;
+    left: 0;
+    right: 0;
+    margin:auto;
+    background-color:#1E2C60;
+    color: whitesmoke;
+    opacity: 1.0;
+    border-radius: 30px;
+    border: solid 10px #191E2D;
+    padding:0.5rem 1rem 0.55rem 1rem;
+    font-size: 1rem;
+    transition: 2s;
+    z-index: 40;
+    font-size: 1.4rem
+}
 

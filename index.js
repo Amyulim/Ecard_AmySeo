@@ -58,7 +58,12 @@ var factCount =  document.getElementById("factN");
 var x = 10;
 var a = 0, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=0;
 
-
+function finish() {
+    if(x==0){setTimeout(function() { 
+        document.getElementById("finished").style.display="block";
+    },2000);
+    } else {false}   
+}
 pumkin.addEventListener("mouseenter", function () {
     pumkin.style.animation ="jump 2s infinite";
     pumkinS.style.animation ="Pshadow 2s infinite"
@@ -71,6 +76,7 @@ pumkin.addEventListener("click", function () {
     if(a == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
     }
 });
 
@@ -84,11 +90,13 @@ owl.addEventListener("click", function (){
     document.getElementById("fact2").style.display = "block";
     owl.style.top = "3%";
     owl.style.transform = "rotate(-7deg)";
-    
+   
     b++;
     if(b == 1){
         factCount.innerHTML = x - 1;
         x--;
+      finish();
+    
     }
 });
 
@@ -119,6 +127,8 @@ candy.addEventListener("click", function () {
     if(c == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 });
 
@@ -144,6 +154,8 @@ document.getElementById("calender").addEventListener("click", function () {
     if(d == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 });
 
@@ -193,6 +205,8 @@ document.getElementById("basket").addEventListener("click", function () {
     if(e == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 });
 
@@ -209,6 +223,8 @@ document.getElementById("witch").addEventListener("click", function () {
     if(f == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 });
 
@@ -227,6 +243,8 @@ document.getElementById("spray").addEventListener("click", function () {
     if(g == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 });
 
@@ -242,6 +260,8 @@ document.getElementById("candyCone").addEventListener("click", function() {
     if(h == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 });
 
@@ -259,6 +279,8 @@ document.getElementById("ghost").addEventListener("click", function () {
     if(i == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 })
 
@@ -275,6 +297,8 @@ document.getElementById("candle").addEventListener("click", function () {
     if(j == 1){
         factCount.innerHTML = x - 1;
         x--;
+        finish();
+    
     }
 });
 

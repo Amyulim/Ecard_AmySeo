@@ -2,12 +2,18 @@ var title = document.getElementById("title");
 var mainP = document.getElementById("main");
 var myWindow = document.getElementById("window");
 
+function closeDiv(id) {
+    document.getElementById(id).style.display="none";
+}
+function stopAnim(id) {
+    document.getElementById(id).style.animation="none";
+}
 title.addEventListener("click", function (){
     document.getElementById("blood").style.backgroundPosition="left -100px";
     
     title.style.color="#c63932"; 
     title.style.textShadow ="4px 3px black";
-    title.style.animation ="none"
+    stopAnim("title")
     
     document.getElementById("laugh").play()
     
@@ -52,6 +58,7 @@ var factCount =  document.getElementById("factN");
 var x = 10;
 var a = 0, b=0, c=0, d=0, e=0, f=0, g=0, h=0, i=0, j=0;
 
+
 pumkin.addEventListener("mouseenter", function () {
     pumkin.style.animation ="jump 2s infinite";
     pumkinS.style.animation ="Pshadow 2s infinite"
@@ -68,9 +75,9 @@ pumkin.addEventListener("click", function () {
 });
 
 document.getElementById("fact1C").addEventListener("click", function () {
-    document.getElementById("fact1").style.display = "none";
-    pumkin.style.animation = "none";
-    pumkinS.style.animation = "none";
+    closeDiv("fact1");
+    stopAnim("pumkin")
+    stopAnim("pumS")
 });
 
 owl.addEventListener("click", function (){
@@ -86,7 +93,7 @@ owl.addEventListener("click", function (){
 });
 
 document.getElementById("fact2C").addEventListener("click", function () {
-    document.getElementById("fact2").style.display = "none";
+    closeDiv("fact2");
 });
 
 var spider = document.getElementById("spider");
@@ -116,8 +123,8 @@ candy.addEventListener("click", function () {
 });
 
 document.getElementById("fact3C").addEventListener("click", function () {
-    document.getElementById("fact3").style.display = "none";
-    candy.style.animation = "none";
+    closeDiv("fact3");
+    stopAnim("candy")
 });
 
 document.getElementById("pot").addEventListener("click", function () {
@@ -141,7 +148,7 @@ document.getElementById("calender").addEventListener("click", function () {
 });
 
 document.getElementById("fact4C").addEventListener("click", function () {
-    document.getElementById("fact4").style.display = "none";
+    closeDiv("fact4");
 });
 
 function make3CandyS () {
@@ -190,12 +197,12 @@ document.getElementById("basket").addEventListener("click", function () {
 });
 
 document.getElementById("fact5C").addEventListener("click", function () {
-    document.getElementById("fact5").style.display = "none";
+    closeDiv("fact5");
 });
 
-document.getElementById("moon").addEventListener("click", function () {
+document.getElementById("witch").addEventListener("click", function () {
     console.log("click")
-    document.getElementById("moon").style.backgroundPosition="-70px 120px";
+    document.getElementById("witch").style.backgroundPosition="-70px 120px";
     document.getElementById("fact6").style.display="block";
     
     f++;
@@ -206,9 +213,9 @@ document.getElementById("moon").addEventListener("click", function () {
 });
 
 document.getElementById("fact6C").addEventListener("click", function () {
-   document.getElementById("fact6").style.display = "none";
-   document.getElementById("moon").style.transform="rotateY(180deg)"
-   document.getElementById("moon").style.backgroundPosition="300px 20px";
+   closeDiv("fact6");
+   document.getElementById("witch").style.transform="rotateY(180deg)"
+   document.getElementById("witch").style.backgroundPosition="300px 20px";
 });
 
 document.getElementById("spray").addEventListener("click", function () {
@@ -224,7 +231,7 @@ document.getElementById("spray").addEventListener("click", function () {
 });
 
 document.getElementById("fact7C").addEventListener("click", function () {
-   document.getElementById("fact7").style.display = "none";
+   closeDiv("fact7");
 });
 
 document.getElementById("candyCone").addEventListener("click", function() {
@@ -239,8 +246,8 @@ document.getElementById("candyCone").addEventListener("click", function() {
 });
 
 document.getElementById("fact8C").addEventListener("click", function () {
-    document.getElementById("fact8").style.display = "none";
-    document.getElementById("candyCone").style.animation = "none";
+    closeDiv("fact8");
+    stopAnim("candyCone");
 
 });
 
@@ -256,11 +263,12 @@ document.getElementById("ghost").addEventListener("click", function () {
 })
 
 document.getElementById("fact9C").addEventListener("click", function () {
-    document.getElementById("fact9").style.display = "none";
+    closeDiv("fact9");
 });
-
+document.getElementById("candle").addEventListener("mouseenter", function () {
+   document.getElementById("light").style.animation = "candleO 2s infinite"; 
+})
 document.getElementById("candle").addEventListener("click", function () {
-    document.getElementById("light").style.animation = "candleO 2s infinite";
     document.getElementById("fact10").style.display = "block";
     
     j++;
@@ -271,12 +279,10 @@ document.getElementById("candle").addEventListener("click", function () {
 });
 
 document.getElementById("fact10C").addEventListener("click", function () {
-    document.getElementById("fact10").style.display = "none";
-    document.getElementById("light").style.animation = "none"
+    closeDiv("fact10");
+    stopAnim("light");
  
 });
-
-
 
 
 

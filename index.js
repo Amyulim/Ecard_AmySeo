@@ -286,7 +286,9 @@ document.getElementById("ghost").addEventListener("click", function () {
 
 document.getElementById("fact9C").addEventListener("click", function () {
     closeDiv("fact9");
+    stopAnim("ghost")
 });
+
 document.getElementById("candle").addEventListener("mouseenter", function () {
    document.getElementById("light").style.animation = "candleO 2s infinite"; 
 })
